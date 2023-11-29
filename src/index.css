@@ -7,3 +7,62 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+.navLinks{
+    font-size: 2rem;
+}
+
+.home{
+    background : linear-gradient(to top, #5478f5, white)
+}
+
+.mindset{
+    background : linear-gradient(to top, #e188ff, white)
+}
+
+
+.fitness{
+    background : linear-gradient(to top, #6fff7e, white)
+}
+
+.expense{
+    background : linear-gradient(to top, #665eff, white)
+}
+
+.content{
+    background : linear-gradient(to top, #fff75e, white)
+}
+
+
+.livehard{
+    background : linear-gradient(to top, #838383, white)
+}
+
+
+.mindHomeCards{
+background: rgba(225, 136, 255, 0.34);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.9px);
+-webkit-backdrop-filter: blur(9.9px);
+}
+
+
+@media (max-width: 991px) {
+    .mindHomeCards{
+        margin-top : 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navLinks{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 481px) {
+    .navLinks{
+        font-size: 1rem;
+    }
+}

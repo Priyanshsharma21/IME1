@@ -1,17 +1,17 @@
 import React, {useEffect} from 'react'
 import { useIme1Context } from '../context/ime1Context.jsx';
-import { finance } from '../constants/const.js'
+import { content } from '../constants/const.js'
 import { Row, Col } from 'antd'
 
-const Expense = () => {
+const Content = () => {
   const { setNavBgColor } = useIme1Context()
   useEffect(()=>{
-    setNavBgColor("#665eff")
+    setNavBgColor("#fff75e")
   },[])
   return (
-    <div className='expense w-full min-h-screen'>
+    <div className='content w-full min-h-screen'>
       <Row>
-        {finance.map(item=>(
+        {content.map(item=>(
           <Col xl={8} lg={8} md={24} sm={24} xs={24}>
             {item.title}
           </Col>
@@ -21,4 +21,4 @@ const Expense = () => {
   )
 }
 
-export default Expense
+export default Content
