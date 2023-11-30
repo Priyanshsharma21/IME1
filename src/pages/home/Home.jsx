@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { useIme1Context } from '../context/ime1Context.jsx';
+import { useIme1Context } from '../../context/ime1Context.jsx';
 import { Row, Col } from 'antd'
 
 const Home = () => {

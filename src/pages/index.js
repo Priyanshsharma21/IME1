@@ -1,9 +1,9 @@
-import Home from './Home'
-import Mindset from './Mindset'
-import Fitness from './Fitness'
-import LiveHard from './LiveHard'
-import Expense from './Expense'
-import Content from './Content'
+import Home from './home/Home'
+import Mindset from './mindset/Mindset'
+import Fitness from './fitness/Fitness'
+import LiveHard from './livehard/LiveHard'
+import Expense from './expense/Expense'
+import Content from './content/Content'
 
 
 export {
@@ -12,5 +12,5 @@ export {
     Fitness,
     LiveHard,
     Expense,
-    Content
+    Content,
 }
