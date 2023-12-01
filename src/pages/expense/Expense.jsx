@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useIme1Context } from '../../context/ime1Context.jsx';
 import { finance } from '../../constants/const.js'
 import { Row, Col } from 'antd'
+import { Link } from 'react-router-dom';
 
 const Expense = () => {
   const { setNavBgColor } = useIme1Context();
@@ -14,7 +15,8 @@ const Expense = () => {
       <Row className='w-[90%]' gutter={[16, 16]}>
         {finance.map((item, index) => (
           <Col key={index} xl={8} lg={8} md={24} sm={24} xs={24}>
-            <div
+           <Link to={item.path}>
+           <div
               className='mindHomeCards w-full min-h-[400px] cursor-pointer'
               style={{
                 backgroundImage: `url(${item.img})`,
@@ -30,6 +32,7 @@ const Expense = () => {
                 </div>
               )}
             </div>
+           </Link>
           </Col>
         ))}
       </Row>

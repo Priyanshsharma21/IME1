@@ -38,6 +38,11 @@
     background : linear-gradient(to top, #838383, white)
 }
 
+.books{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, #9c95ff 49%, #9c95ff 100%);
+    height: max-content;
+}
 
 
 
