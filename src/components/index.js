@@ -1,4 +1,4 @@
 import Navbar from "./Navbar";
 import BookCard from "./BookCard";
-
-export { Navbar, BookCard };
+import TechCard from "./TechCard";
+export { Navbar, BookCard, TechCard };

@@ -9,6 +9,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
 }
 
 ::-webkit-scrollbar{
@@ -58,6 +59,11 @@
     height: max-content;
 }
 
+.tech{
+    background: #e5b39480;
+    height: max-content; 
+}
+
 
 
 /* Mindset.css */
@@ -105,7 +111,7 @@
 }
 .learningBy{
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 500;
     display: flex;
     justify-content: start;
 }
@@ -128,6 +134,12 @@
     cursor: url(/assets/bookpagecursor.png), auto;
 }
 
+.heading{
+    font-size: 2rem;
+}
+
+
+
 @media (max-width: 991px) {
     .mindHomeCards{
         margin-top : 3.5rem;
@@ -147,6 +159,9 @@
     .backbtn{
         padding: 0.8rem;
     }
+    .heading{
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 481px) {
@@ -165,6 +180,7 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
+  
 }
 
 

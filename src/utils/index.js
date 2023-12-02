@@ -25,3 +25,27 @@ export const booksAggregatedData = (data) => {
 
   return Object.values(aggregatedData);
 };
+
+export const techsAggregatedData = (data) => {
+  const aggregatedData = {};
+
+  data.forEach((item) => {
+    const date = item.date;
+    if (!aggregatedData[date]) {
+      aggregatedData[date] = {
+        id: item.id,
+        title: [item.title],
+        date: item.date,
+        week_number: item.week_number,
+        duration: item.duration,
+      };
+    } else {
+      if (!aggregatedData[date].title.includes(item.title)) {
+        aggregatedData[date].title.push(item.title);
+      }
+      aggregatedData[date].duration += item.duration;
+    }
+  });
+
+  return Object.values(aggregatedData);
+};

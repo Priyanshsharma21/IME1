@@ -271,3 +271,112 @@ export const booksAndPodcastData = [
     ],
   },
 ];
+
+
+export const monthsArray = [
+  { monthName: "January", monthNumber: 1 },
+  { monthName: "February", monthNumber: 2 },
+  { monthName: "March", monthNumber: 3 },
+  { monthName: "April", monthNumber: 4 },
+  { monthName: "May", monthNumber: 5 },
+  { monthName: "June", monthNumber: 6 },
+  { monthName: "July", monthNumber: 7 },
+  { monthName: "August", monthNumber: 8 },
+  { monthName: "September", monthNumber: 9 },
+  { monthName: "October", monthNumber: 10 },
+  { monthName: "November", monthNumber: 11 },
+  { monthName: "December", monthNumber: 12 },
+];
+
+
+export const weeksArray = [
+  { weekNumber: 1, weekLabel: "Week 1" },
+  { weekNumber: 2, weekLabel: "Week 2" },
+  { weekNumber: 3, weekLabel: "Week 3" },
+  { weekNumber: 4, weekLabel: "Week 4" },
+  { weekNumber: 5, weekLabel: "Week 5" },
+];
+
+
+
+export const techLearningData = [
+  {
+    id : "23222w2",
+    title: "JavaScript",
+    takeaways: [
+      "JavaScript is a high-level, interpreted programming language.",
+      "It is an object-oriented programming (OOP) language.",
+      "JavaScript is widely used as the language of the web.",
+      "It allows dynamic content updates and interaction on the client side.",
+      "Commonly used for building interactive and responsive user interfaces.",
+    ],
+    duration: 60,
+    resources: [
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+      "https://www.codecademy.com/learn/introduction-to-javascript",
+      "https://www.freecodecamp.org/learn/",
+    ],
+    date: "2023-12-04",
+    week_number : 1
+  },
+  {
+    id : "wdw3wx",
+    title: "React.js",
+    takeaways: [
+      "React is a JavaScript library for building user interfaces.",
+      "It is developed and maintained by Facebook.",
+      "React allows the creation of reusable UI components.",
+      "Declarative syntax makes it easier to understand and debug code.",
+      "Virtual DOM helps improve application performance.",
+    ],
+    duration: 75,
+    resources: [
+      "https://reactjs.org/docs/getting-started.html",
+      "https://www.tutorialspoint.com/reactjs/index.htm",
+      "https://egghead.io/courses/the-beginner-s-guide-to-react",
+    ],
+    date: "2023-12-04",
+    week_number : 1
+
+  },
+  {
+    id : "dwd22sw",
+    title: "Node.js",
+    takeaways: [
+      "Node.js is a JavaScript runtime built on the V8 JavaScript engine.",
+      "It allows executing JavaScript code on the server-side.",
+      "Commonly used for building scalable network applications.",
+      "Node Package Manager (npm) is the largest ecosystem of open-source libraries.",
+      "Event-driven, non-blocking I/O model for efficiency and performance.",
+    ],
+    duration: 90,
+    resources: [
+      "https://nodejs.org/en/docs/",
+      "https://www.w3schools.com/nodejs/",
+      "https://www.tutorialspoint.com/nodejs/index.htm",
+    ],
+    date: "2023-12-2",
+    week_number : 1
+
+  },
+
+  {
+    id : "d3dwssqs",
+    title: "Nextjs",
+    takeaways: [
+      "React framework which provides you more features.",
+      "Features are like file based routing.",
+      "SSR, SEO, In build Lazy Loading, Image optimization."
+    ],
+    duration: 23,
+    resources: [
+      "https://nodejs.org/en/docs/",
+      "https://www.w3schools.com/nodejs/",
+      "https://www.tutorialspoint.com/nodejs/index.htm",
+    ],
+    date: "2023-12-2",
+    week_number : 1
+  },
+];
+
+console.log(techLearningData);

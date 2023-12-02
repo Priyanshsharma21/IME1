@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { LiaHandPointRight } from "react-icons/lia";
-import { booksAndPodcastData } from '../../constants/const';
+import { techLearningData } from '../../constants/const';
 import classNames from '../../styles/mindset.module.css'
 import { motion } from 'framer-motion';
 import { IoMdArrowRoundBack } from "react-icons/io";
 import moment from 'moment'
-const BookDetails = () => {
+
+const TechDetails = () => {
   const { id } = useParams();
-  const [book, setBook] = useState(null);
+  const [tech, setTech] = useState(null);
   const navigate = useNavigate()
 
   useEffect(() => {
-    const foundBook = booksAndPodcastData.find((b) => b.id === id);
-    setBook(foundBook);
+    const foundTech = techLearningData.find((b) => b.id === id);
+    setTech(foundTech);
   }, [id]);
 
   return (
-    <div className="w-full min-h-screen bg-[#fff6aee6] py-20 bookDetails">
+    <div className="w-full min-h-screen bg-[#e5aeffe6] py-20 bookDetails">
     <div className="absolute cursor-pointer backbtn top-10" onClick={()=>navigate(-1)}>
         <IoMdArrowRoundBack />
     </div>
@@ -26,12 +27,12 @@ const BookDetails = () => {
          whileInView={{x:[-100,0], opacity:[0,1]}}
          transition={{duration:0.5}}
         >
-        {book && book.title}
+        {tech && tech.title}
         </motion.div>
       <div className="takeaways mt-4">
         <ul>
-          {book &&
-            book.takeaways.map((takeaway, index) => (
+          {tech &&
+            tech.takeaways.map((takeaway, index) => (
               <motion.div
                whileInView={{x:[100,0], opacity:[0,1]}}
                transition={{duration:1}} key={index} className={classNames.takeawaysText}>
@@ -43,26 +44,26 @@ const BookDetails = () => {
       </div>
 
       <motion.div  whileInView={{x:[100,0], opacity:[0,1]}}
-               transition={{duration:1}} className="learningBy flex justify-start takeaways mt-4 font-medium btnText">
-        Learning By - {book && book.author}
-      </motion.div>
-      
-      <motion.div  whileInView={{x:[100,0], opacity:[0,1]}}
                transition={{duration:1}} className="learningBy make_me_up flex justify-start takeaways btnText">
-        Learning Date - {book && moment(book?.date).format("DD MMM YYYY")}
+        <span className="font-semibold">
+        {tech && moment(tech?.date).format("DD MMM YYYY")}
+        </span>
       </motion.div>
 
       <div className='mt-10 takeaways'>
-      <a
-        className="bg-[#fff6aee6] border border-black text-black flex justify-center hover:bg-[#23232324] font-bold py-2 px-4 rounded mt-4 uppercase btnText"
-        href={book?.resource}
+      {tech?.resources.map(res=>(
+        <a
+        className="bg-[#e5aeffe6] border border-black text-black flex justify-center hover:bg-[#23232324] font-bold py-2 px-4 rounded mt-4 uppercase btnText"
+        href={res}
         target='_blank'
       >
-        {book?.way} this {book?.type} Now
+        Read More
       </a>
+      ))}
+      
       </div>
     </div>
   );
 };
 
-export default BookDetails;
+export default TechDetails;
