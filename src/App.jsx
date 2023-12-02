@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Fitness, Home, Mindset, Expense, LiveHard, Content } from './pages';
-import { Books, Journal, Tech } from './pages/mindset/index';
+import { BookDetails, Books, Journal, Tech } from './pages/mindset/index';
 import { Navbar } from './components';
 import { Meditation, Nutrition, Workout } from './pages/fitness/index.js';
 import { Savings, DailyExpense, Investments } from './pages/expense/index.js';
@@ -17,6 +17,7 @@ const App = () => {
         
         <Route path="/mind" element={<Mindset />} />
         <Route path="/mind/books" element={<Books />} />
+        <Route path="/mind/books/:id" element={<BookDetails />} />
         <Route path="/mind/journal" element={<Journal />} />
         <Route path="/mind/tech" element={<Tech />} />
         
@@ -25,14 +26,10 @@ const App = () => {
         <Route path="/body/nutrition" element={<Nutrition />} />
         <Route path="/body/meditation" element={<Meditation />} />
 
-
         <Route path="/expense" element={<Expense />} />
         <Route path="/expense/saving" element={<Savings />} />
         <Route path="/expense/dailyexpense" element={<DailyExpense />} />
         <Route path="/expense/investment" element={<Investments />} />
-
-
-
 
         <Route path="/content" element={<Content />} />
         <Route path="/content/editing" element={<Editing />} />

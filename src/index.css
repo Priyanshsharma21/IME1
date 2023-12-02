@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500;600;700&family=Bebas+Neue&family=Inconsolata:wght@400;500&family=Poppins:wght@300;400;500&display=swap');
+
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(255, 255, 255);
+    border-radius: 3rem;
 }
 
 .navLinks{
@@ -39,8 +54,7 @@
 }
 
 .books{
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, #9c95ff 49%, #9c95ff 100%);
+    background: #bae59480;
     height: max-content;
 }
 
@@ -74,9 +88,55 @@
     font-size: 2rem;
     font-weight: 800;
 }
+.tooltipMain{
+    background: rgba(255, 255, 255, 0.36);
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+}
+
+.takeaways{
+    margin-top: 3rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.learningBy{
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: start;
+}
+.btnText{
+    font-size: 1rem;
+}
+.backbtn{
+    border: 1px solid black;
+    border-radius: 100%;
+    padding: 1rem;
+    top: 10px;
+    left: 20px;
+}
+
+.make_me_up{
+    margin-top: 5px ;
+}
+
+.bookDetails {
+    cursor: url(/assets/bookpagecursor.png), auto;
+}
+
 @media (max-width: 991px) {
     .mindHomeCards{
         margin-top : 3.5rem;
+    }
+
+    .takeaways{
+        margin-top: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }
 
@@ -84,7 +144,9 @@
     .navLinks{
         font-size: 1.2rem;
     }
-
+    .backbtn{
+        padding: 0.8rem;
+    }
 }
 
 @media (max-width: 481px) {
@@ -94,4 +156,15 @@
     .title{
         font-size: 1.2rem;
     }
+    .btnText{
+        font-size: 12px;
+    }
+
+    .takeaways{
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
+
+
