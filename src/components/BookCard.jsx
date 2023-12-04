@@ -3,7 +3,7 @@ import classNames from '../styles/mindset.module.css'
 import { Link } from 'react-router-dom'
 const BookCard = ({bookDetail}) => {
   return (
-    <Link to={`/mind/books/${bookDetail.id}`}>
+    <Link to={`/mind/books/${bookDetail?.id}`}>
     <div className='flex justify-center cursor-pointer mt-16'>
    <div className={classNames.card}>
    

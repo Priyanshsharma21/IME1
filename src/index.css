@@ -54,6 +54,10 @@
     background : linear-gradient(to top, #838383, white)
 }
 
+.journal{
+    background: #bd8def;
+}
+
 .books{
     background: #bae59480;
     height: max-content;

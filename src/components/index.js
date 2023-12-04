@@ -1,4 +1,6 @@
 import Navbar from "./Navbar";
 import BookCard from "./BookCard";
 import TechCard from "./TechCard";
-export { Navbar, BookCard, TechCard };
+import JournalCard from "./JournalCard";
+
+export { Navbar, BookCard, TechCard, JournalCard };

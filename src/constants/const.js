@@ -379,4 +379,140 @@ export const techLearningData = [
   },
 ];
 
-console.log(techLearningData);
+
+
+export const journalLearning = [
+  {
+    id : "3e3d2ed",
+    date : "2023-12-4",
+    week_number : 1,
+    title : "Roller Coster Day",
+    takeaways : [
+      "Wake Up early and did my workout.",
+      "Took healthy breakfast.",
+      "Reached office at time.",
+      "Focused on work.",
+      "Completed my tasks.",
+      "Did gym workout.",
+      "Learned New things.",
+      "Slept on time"
+    ],
+
+    positives : [
+      "Wake Up early morning",
+      "Read 10 pages of book",
+      "Did both morning and evening workout.",
+      "Didn't skip Meal. And took healthy meal.",
+      "Drank 4l water",
+      "Worked on my personal project.",
+      "Taught 2 peoples about technology",
+      "Donated 100rs in charity",
+      "Learned song on guitar",
+      "Helped one guy with Gym workout and Nutrition guide for free.",
+      "Best part is listening thank you from 4 peoples today."
+    ],
+
+    negative : [
+      "Wasted my time on empty scrolling",
+      "Overthinking about someone.",
+      "Felt insecure about myself, will work on that.",
+    ],
+
+    learning : [
+      "Stop wasting on things you can't control, stop overthinking, stop giving fuck about people who dont care about you.",
+      "Focus on yourself, make yourself 1% everyday, try to help as much as possible. Spread positivity in this universe, keep yourself busy.",
+      "Take help of music, play more songs on guitar, keep yourself busy as much as possible."
+    ],
+
+    actions : [
+      "Wake up early, resist my sleep.",
+      "Said no to junk and keep eating boring boiled food.",
+      "Helped 3 people still had no time.",
+      "Went to gym when I was too tired and pushed my limits, hit PR in bench press."
+    ],
+
+    rating : 80,
+    resources_gather : [
+      {
+        title : "Nextjs topic",
+        url : "https://www.builder.io/blog/nextjs-14-layouts-templates?ref=dailydev"
+      }
+    ]
+  },
+
+  {
+    "id": "fwef3dw",
+    "date": "2023-12-05",
+    "week_number": 1,
+    title : "Chill Pill",
+    "takeaways": ["Morning meditation", "Healthy breakfast", "Productive workday"],
+    "positives": ["Completed coding challenge", "Positive feedback from a colleague"],
+    "negative": ["Procrastinated on a task"],
+    "learning": ["Effective time management", "Improved coding skills"],
+    "actions": ["Scheduled tasks for tomorrow", "Set realistic goals"],
+    "rating": 85,
+    "resources_gather": [
+      {
+        "title": "Effective Time Management",
+        "url": "https://www.lifehack.org/articles/productivity/10-ways-to-improve-time-management-skills-for-more-productivity.html"
+      }
+    ]
+  },
+
+  {
+    "id": "f23ef3ec",
+    "date": "2023-12-06",
+    "week_number": 1,
+    title : "Productive Day",
+    "takeaways": ["Early morning workout", "Healthy meal choices"],
+    "positives": ["Completed daily reading goal", "Finished a challenging task"],
+    "negative": ["Struggled with focus in the afternoon"],
+    "learning": ["Importance of consistent exercise", "Effective task prioritization"],
+    "actions": ["Scheduled regular breaks", "Started a new coding project"],
+    "rating": 90,
+    "resources_gather": [
+      {
+        "title": "Task Prioritization Techniques",
+        "url": "https://blog.trello.com/task-prioritization"
+      }
+    ]
+  },
+
+  {
+    "id": "f23ef323e",
+    "date": "2023-12-07",
+    "week_number": 1,
+    title : "Ready Stady Poo",
+    "takeaways": ["Mindful breathing exercises", "Completed a coding tutorial"],
+    "positives": ["Maintained a positive mindset", "Helped a friend with a tech issue"],
+    "negative": ["Feeling fatigued in the evening"],
+    "learning": ["Practicing mindfulness for better focus", "Deepened coding knowledge"],
+    "actions": ["Scheduled a tech meetup", "Planned a weekend coding session"],
+    "rating": 88,
+    "resources_gather": [
+      {
+        "title": "Mindful Breathing Techniques",
+        "url": "https://www.mindful.org/how-to-meditate/"
+      }
+    ]
+  },
+
+  {
+    "id": "2edf2323",
+    "date": "2023-12-08",
+    "week_number": 1,
+    title : "Learning A Lot Day",
+    "takeaways": ["Completed a personal project milestone", "Healthy meal prep for the week"],
+    "positives": ["Received positive client feedback", "Took a nature walk"],
+    "negative": ["Delayed a work deadline"],
+    "learning": ["Effective client communication", "Balancing work and relaxation"],
+    "actions": ["Scheduled regular breaks during work", "Set aside time for self-care"],
+    "rating": 87,
+    "resources_gather": [
+      {
+        "title": "Effective Client Communication",
+        "url": "https://www.smashingmagazine.com/2018/02/effective-communication-developers/"
+      }
+    ]
+  }
+]

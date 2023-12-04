@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Fitness, Home, Mindset, Expense, LiveHard, Content } from './pages';
-import { BookDetails, Books, Journal, Tech, TechDetails } from './pages/mindset/index';
+import { BookDetails, Books, Journal, JournalDetails, Tech, TechDetails } from './pages/mindset/index';
 import { Navbar } from './components';
 import { Meditation, Nutrition, Workout } from './pages/fitness/index.js';
 import { Savings, DailyExpense, Investments } from './pages/expense/index.js';
@@ -19,6 +19,7 @@ const App = () => {
         <Route path="/mind/books" element={<Books />} />
         <Route path="/mind/books/:id" element={<BookDetails />} />
         <Route path="/mind/journal" element={<Journal />} />
+        <Route path="/mind/journal/:id" element={<JournalDetails />} />
         <Route path="/mind/tech" element={<Tech />} />
         <Route path="/mind/tech/:id" element={<TechDetails />} />
         
