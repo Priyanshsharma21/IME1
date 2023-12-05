@@ -516,3 +516,332 @@ export const journalLearning = [
     ]
   }
 ]
+
+
+
+
+const cardioData = [
+  {
+    date: "2023-12-01",
+    week_number: 1,
+    workout_type: "Cardio",
+    duration: 10,
+    rest_bw_sets: 15,
+    day : "Monday",
+    exercises_performed: [
+      { name: "Explosive jumping jacks squads", timing: 80 },
+      { name: "Mountain climber pushups", timing: 120 },
+      { name: "punch squads", timing: 80 },
+      { name: "russian twist with punches", timing: 80 },
+      { name: "lunges with squads", timing: 80 },
+      { name: "shoulder press with pushups", timing: 80 },
+      { name: "v-ups", timing: 40 },
+    ],
+  },
+  {
+    date: "2023-12-02",
+    week_number: 1,
+    workout_type: "Cardio",
+    duration: 12,
+    rest_bw_sets: 20,
+    day : "Tuesday",
+    exercises_performed: [
+      { name: "High knees", timing: 90 },
+      { name: "Burpees", timing: 60 },
+      { name: "Jump rope", timing: 180 },
+      { name: "Box jumps", timing: 120 },
+      { name: "Plank jacks", timing: 60 },
+      { name: "Mountain climbers", timing: 90 },
+      { name: "Jumping lunges", timing: 90 },
+    ],
+  },
+  {
+    date: "2023-12-03",
+    week_number: 1,
+    workout_type: "Cardio",
+    duration: 15,
+    rest_bw_sets: 15,
+    day : "Wednesday",
+    exercises_performed: [
+      { name: "Sprint intervals", timing: 60 },
+      { name: "Jumping jacks", timing: 120 },
+      { name: "Side shuffle", timing: 90 },
+      { name: "Toe taps", timing: 60 },
+      { name: "Bicycle crunches", timing: 120 },
+      { name: "Plank to push-up", timing: 90 },
+      { name: "Star jumps", timing: 60 },
+    ],
+  },
+];
+
+
+
+
+
+const gymWorkoutData = [
+  {
+    date: "2023-12-01",
+    week_number: 1,
+    workout_type: "Push",
+    day : "Monday",
+    duration: 70,
+    exercises_performed: [
+      {
+        name: "Barbell Bench Press",
+        rest_bw_sets: 90,
+        sets_info: [
+          { set_number: 1, weight: 50, reps: 12 },
+          { set_number: 2, weight: 55, reps: 10 },
+          { set_number: 3, weight: 60, reps: 8 },
+        ],
+      },
+      {
+        name: "Overhead Dumbbell Press",
+        rest_bw_sets: 75,
+        sets_info: [
+          { set_number: 1, weight: 22.5, reps: 12 },
+          { set_number: 2, weight: 25, reps: 10 },
+          { set_number: 3, weight: 27.5, reps: 8 },
+        ],
+      },
+      
+      {
+        name : "Smith Machine Chest Press",
+        rest_bw_sets : 90,
+        sets_info : [
+          {
+            set_number : 1,
+            weight : 50, // kg 
+            reps : 12
+          },
+           {
+            set_number : 2,
+            weight : 40, // kg
+            reps : 15
+          },
+           {
+            set_number : 3,
+            weight : 40, // kg 
+            reps : 12
+          },
+           {
+            set_number : 4,
+            weight : 30, // kg
+            reps : 18
+          }
+        ]
+      },
+    
+    
+       {
+        name : "Lateral Raises",
+        rest_bw_sets : 90, // seconds
+        sets_info : [
+          {
+            set_number : 1,
+            weight : 12.5, // kg 
+            reps : 15
+          },
+           {
+            set_number : 2,
+            weight : 12.5 ,// kg
+            reps : 10
+          },
+           {
+            set_number : 3,
+            weight : 10 ,// kg 
+            reps : 20
+          },
+           {
+            set_number : 4,
+            weight : 10, // kg
+            reps : 18
+          }
+        ]
+      },
+    
+    
+    
+    
+       {
+        name : "Tricep Pushdown",
+        rest_bw_sets : 90, // seconds
+        sets_info : [
+          {
+            set_number : 1,
+            weight : 50, // kg 
+            reps : 12
+          },
+           {
+            set_number : 2,
+            weight : 40, // kg
+            reps : 15
+          },
+           {
+            set_number : 3,
+            weight : 40, // kg 
+            reps : 15
+          },
+           {
+            set_number : 4,
+            weight : 30, // kg
+            reps : 20
+          }
+        ]
+      },
+    
+    
+      {
+        name : "Cable Chest Flys",
+        rest_bw_sets : 90, // seconds
+        sets_info : [
+          {
+            set_number : 1,
+            weight : 20,
+            reps : 15
+          },
+           {
+            set_number : 2,
+            weight : 20,
+            reps : 15
+          },
+           {
+            set_number : 3,
+            weight : 15,
+            reps : 20
+          },
+           {
+            set_number : 4,
+            weight :15,
+            reps : 20
+          }
+        ]
+      },
+    ],
+  },
+
+
+  {
+    date: "2023-12-02",
+    week_number: 1,
+    workout_type: "Pull",
+    duration: 75,
+    day : "Tuesday",
+    exercises_performed: [
+      {
+        name: "Deadlifts",
+        rest_bw_sets: 120,
+        sets_info: [
+          { set_number: 1, weight: 80, reps: 10 },
+          { set_number: 2, weight: 90, reps: 8 },
+          { set_number: 3, weight: 100, reps: 6 },
+        ],
+      },
+      {
+        name: "Pull-Ups",
+        rest_bw_sets: 90,
+        sets_info: [
+          { set_number: 1,weight: 77, reps: 10 },
+          { set_number: 2,weight: 77, reps: 8 },
+          { set_number: 3,weight: 77, reps: 6 },
+        ],
+      },
+      {
+        name: "Cable Rows",
+        rest_bw_sets: 90,
+        sets_info: [
+          { set_number: 1, reps: 15, weight: 100, },
+          { set_number: 2, reps: 12, weight: 120, },
+          { set_number: 3, reps: 10, weight: 130, },
+          { set_number: 3, reps: 18, weight: 100, },
+        ],
+      },
+
+      {
+        name: "cable pullover",
+        rest_bw_sets: 90,
+        sets_info: [
+          { set_number: 1, reps: 15, weight: 40, },
+          { set_number: 2, reps: 15, weight: 40, },
+          { set_number: 3, reps: 15, weight: 40, },
+          { set_number: 3, reps: 16, weight: 40, },
+        ],
+      },
+
+      {
+        name: "Dumbell Curl",
+        rest_bw_sets: 90,
+        sets_info: [
+          { set_number: 1, reps: 15, weight: 10, },
+          { set_number: 2, reps: 12, weight: 12.5, },
+          { set_number: 3, reps: 10, weight: 15, },
+          { set_number: 3, reps: 21, weight: 7.5, },
+        ],
+      },
+
+
+    ],
+  },
+  {
+    date: "2023-12-03",
+    week_number: 1,
+    workout_type: "Legs",
+    duration: 80,
+    day : "Wednesday",
+    exercises_performed: [
+      {
+        name: "Back Squats",
+        rest_bw_sets: 120,
+        sets_info: [
+          { set_number: 1, weight: 60, reps: 18 },
+          { set_number: 2, weight: 80, reps: 12 },
+          { set_number: 3, weight: 90, reps: 8 },
+          { set_number: 3, weight: 60, reps: 15 },
+        ],
+      },
+      {
+        name: "Leg Press",
+        rest_bw_sets: 90,
+        sets_info: [
+          { set_number: 1, weight: 90, reps: 18 },
+          { set_number: 2, weight: 120, reps: 15 },
+          { set_number: 3, weight: 150, reps: 10 },
+          { set_number: 3, weight: 170, reps: 8 },
+        ],
+      },
+
+      {
+        name: "Leg Curls",
+        rest_bw_sets: 90,
+        sets_info: [
+          { set_number: 1, weight: 60, reps: 10 },
+          { set_number: 2, weight: 50, reps: 15 },
+          { set_number: 3, weight: 60, reps: 10 },
+          { set_number: 3, weight: 40, reps: 15 },
+        ],
+      },
+
+      {
+        name: "Leg Extentions",
+        rest_bw_sets: 90,
+        sets_info: [
+          { set_number: 1, weight: 60, reps: 10 },
+          { set_number: 2, weight: 50, reps: 15 },
+          { set_number: 3, weight: 60, reps: 10 },
+          { set_number: 3, weight: 40, reps: 15 },
+        ],
+      },
+
+      {
+        name: "Leg Calf raises",
+        rest_bw_sets: 60,
+        sets_info: [
+          { set_number: 1, weight: 50, reps: 21 },
+          { set_number: 2, weight: 50, reps: 21 },
+          { set_number: 3, weight: 50, reps: 21 },
+          { set_number: 3, weight: 50, reps: 21 },
+        ],
+      },
+    ],
+  },
+];
