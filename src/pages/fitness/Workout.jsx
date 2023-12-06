@@ -90,12 +90,14 @@ const Workout = () => {
   const [exercises, setExercises] = useState({});
   const [exerciseData, setExerciseData] = useState({});
 
+  console.log(cardio,gym)
+
   useEffect(()=>{
     setCardio(cardioData)
   },[])
 
   useEffect(()=>{
-    const filteredCardioExercises = cardioData.filter((cardio)=>{
+    const filteredCardioExercises = cardioData?.filter((cardio)=>{
       const cardioYear = moment(cardio.date).format("YYYY")
       const cardioMonth = moment(cardio.date).format("MMMM")
       const cardioWeek = cardio.week_number
@@ -106,7 +108,13 @@ const Workout = () => {
       }
     })
 
-    const filteredCardio = cardioData.filter((cardio)=>{
+    if(filteredCardioExercises){
+      setCardio(filteredCardioExercises[0]?.exercises_performed)
+    }else{
+      setCardio(null)
+    }
+
+    const filteredCardio = cardioData?.filter((cardio)=>{
       const cardioYear = moment(cardio.date).format("YYYY")
       const cardioMonth = moment(cardio.date).format("MMMM")
       const cardioWeek = cardio.week_number
@@ -115,7 +123,13 @@ const Workout = () => {
       }
     })
 
-    const filteredGym = gymWorkoutData.filter((gym)=>{
+    if(filteredCardio){
+      setCardioRaw(filteredCardio)
+    }else{
+      setCardioRaw(null)
+    }
+
+    const filteredGym = gymWorkoutData?.filter((gym)=>{
       const gymYear = moment(gym.date).format("YYYY")
       const gymMonth = moment(gym.date).format("MMMM")
       const gymWeek = gym.week_number
@@ -123,8 +137,10 @@ const Workout = () => {
         return gym
       }
     })
+    setGym(filteredGym)
 
-    const filteredGymExercise = gymWorkoutData.filter((gym)=>{
+
+    const filteredGymExercise = gymWorkoutData?.filter((gym)=>{
       const gymYear = moment(gym.date).format("YYYY")
       const gymMonth = moment(gym.date).format("MMMM")
       const gymWeek = gym.week_number
@@ -132,30 +148,35 @@ const Workout = () => {
       if(gymYear == selectedYear && gymMonth == selectedMonth && gymWeek == selectedWeek && gymDay === selectedDay){
         return gym
       }
-    })
+    })  
+    if(filteredGymExercise){
+      setGymExercise(filteredGymExercise[0]?.exercises_performed)
+    }else{
+      setGymExercise(null)
+    }
 
+    if(filteredGymExercise){
+      const exercises = filteredGymExercise[0]?.exercises_performed?.map((exercise,i)=>{
+        return {
+          name : exercise?.name,
+          key : i
+        }
+      })
+      setExercises(exercises)
+    }
     
-    setGym(filteredGym)
-    setGymExercise(filteredGymExercise[0].exercises_performed)
-    const exercises = filteredGymExercise[0].exercises_performed?.map((exercise,i)=>{
-      return {
-        name : exercise.name,
-        key : i
-      }
-    })
 
-    const filterExerciseInfo = filteredGymExercise[0].exercises_performed?.filter((exercise,i)=>{
+    const filterExerciseInfo = filteredGymExercise[0]?.exercises_performed?.filter((exercise,i)=>{
       if(exercise.name === selectedExercise){
         return exercise
       }
     })
 
-    setExerciseData(filterExerciseInfo[0].sets_info)
-
-    setExercises(exercises)
-    setCardioRaw(filteredCardio)
-    setCardio(filteredCardioExercises[0]?.exercises_performed)
-
+    if(filterExerciseInfo){
+      setExerciseData(filterExerciseInfo[0]?.sets_info)
+    }else{
+      setExerciseData(null)
+    }
   },[selectedYear, selectedMonth, selectedWeek, selectedDay, selectedExercise])
 
   const years = [2023, 2024];
@@ -181,20 +202,24 @@ const Workout = () => {
   };
 
   return (
-    <div className="workout w-full min-h-screen overflow-scroll">
+    <div className="workout w-full">
     <div className="absolute cursor-pointer backbtn top-10" onClick={()=>navigate(-1)}>
         <IoMdArrowRoundBack />
     </div>
     <div className='font-semibold mt-20 heading w-full flex justify-center'>Analytics</div>
-    <div className="filters mt-5 mb-4 ml-4">
-                <Select value={selectedYear} onChange={handleYearChange}>
+    <div className="filters mt-5 mb-4 ">
+      <Row>
+        <Col xl={4} lg={4} md={4} sm={12} xs={12} className="flex justify-center mt-5">
+        <Select value={selectedYear} onChange={handleYearChange}>
                   {years.map((year) => (
                     <Option key={year} value={year}>
                       {year}
                     </Option>
                   ))}
                 </Select>
-                <Select value={selectedMonth} onChange={handleMonthChange} className='ml-2'>
+        </Col>
+        <Col xl={4} lg={4} md={4} sm={12} xs={12} className="flex justify-center mt-5">
+        <Select value={selectedMonth} onChange={handleMonthChange} className='ml-2'>
                   <Option value="">All Months</Option>
                   {monthsArray.map((month) => (
                     <Option key={month.monthNumber} value={month.monthName}>
@@ -202,7 +227,9 @@ const Workout = () => {
                     </Option>
                   ))}
                 </Select>
-                <Select value={selectedWeek} onChange={handleWeekChange} className='ml-2'>
+        </Col>
+        <Col xl={4} lg={4} md={4} sm={12} xs={12} className="flex justify-center mt-5">
+        <Select value={selectedWeek} onChange={handleWeekChange} className='ml-2'>
                   <Option value="">All Weeks</Option>
                   {weeksArray.map((week) => (
                     <Option key={week.weekNumber} value={week.weekNumber}>
@@ -210,7 +237,9 @@ const Workout = () => {
                     </Option>
                   ))}
                 </Select>
-                <Select value={selectedDay} onChange={handleDayChange} className='ml-2'>
+        </Col>
+        <Col xl={4} lg={4} md={4} sm={12} xs={12} className="flex justify-center mt-5">
+        <Select value={selectedDay} onChange={handleDayChange} className='ml-2'>
                   <Option value="">Days</Option>
                   {days.map((day) => (
                     <Option key={day.key} value={day.title}>
@@ -218,8 +247,11 @@ const Workout = () => {
                     </Option>
                   ))}
                 </Select>
-
-                {Object.entries(exercises).length > 0 && (
+        </Col>
+        <Col xl={4} lg={4} md={4} sm={12} xs={12} className="flex justify-center mt-5 ml-10">
+        {exercises && (
+                  <>
+                  {Object.entries(exercises).length > 0 && (
                   <Select value={selectedExercise} onChange={handleExerciseChange} className='ml-2'>
                   <Option value="">Exercise</Option>
                   {exercises?.map((exercise,i) => (
@@ -229,11 +261,17 @@ const Workout = () => {
                   ))}
                 </Select>
                 )}
+                  </>
+                )}
+        </Col>
+      </Row>
               </div>
       <Row>
         <Col xl={12} lg={12} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-10">
+         <div className='font-semibold flex justify-center w-full'>{selectedDay} Cardio Exercises Stats</div>
+
           <div className="w-full h-full mt-10 pr-12">
-          {cardioRaw?.length > 0 ? (
+          {cardio?.length > 0 ? (
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={cardio}
@@ -242,7 +280,7 @@ const Workout = () => {
                 <XAxis dataKey="name" angle={0} />
                 <YAxis />
                 <Tooltip content={<CustomTooltip />} />
-                <Bar dataKey="timing" fill="#282828" activeBar={<Rectangle fill="#ffa8a8" stroke="black" />} />
+                <Bar dataKey="timing" fill="#f03e3e" stroke="black" activeBar={<Rectangle fill="#ffa8a8" stroke="black" />} />
               </BarChart>
             </ResponsiveContainer>
           ):(
@@ -252,8 +290,11 @@ const Workout = () => {
         </Col>
 
         <Col xl={12} lg={12} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-10">
+
         <div className="w-full h-full mt-10 pr-12">
-        {cardio?.length > 0  ? (
+        <div className='font-semibold flex justify-center w-full'>Week {selectedWeek} Cardio Stats</div>
+
+        {cardioRaw?.length > 0  ? (
           <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={cardioRaw}
@@ -262,7 +303,7 @@ const Workout = () => {
             <XAxis dataKey="date" />
             <YAxis />
             <Tooltip content={<CustomTooltip />}/>
-            <Area type="monotone" dataKey="duration" stroke="black" fill="#ffa8a8" />
+            <Area type="monotone" dataKey="duration" stroke="black" fill="#7048e8" />
           </AreaChart>
         </ResponsiveContainer>
         ):(
@@ -274,19 +315,22 @@ const Workout = () => {
 
 
       <Row>
-        <Col xl={8} lg={24} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-10">
+        <Col xl={8} lg={24} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-40">
+        <div className='font-semibold flex justify-center w-full'>Week {selectedWeek} Gym Stats</div>
           <div className="w-full h-full mt-10 pr-12">
           {gym?.length > 0 ? (
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart
-                data={gym}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" angle={0} />
-                <YAxis />
-                <Tooltip content={<CustomTooltip />} />
-                <Line type="monotone" dataKey="duration" stroke="#82ca9d" />
-              </LineChart>
+
+            <AreaChart
+            data={gym}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="date" />
+            <YAxis />
+            <Tooltip content={<CustomTooltip />}/>
+            <Area type="monotone" dataKey="duration" stroke="black" fill="#38d9a9" />
+          </AreaChart>
+          
             </ResponsiveContainer>
           ):(
             <div className="flex justify-center font-semibold">No Data Found For This Dates!!!</div>
@@ -294,7 +338,8 @@ const Workout = () => {
           </div>
         </Col>
 
-        <Col xl={8} lg={24} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-10">
+        <Col xl={8} lg={24} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-40">
+        <div className='font-semibold flex justify-center w-full'>{selectedDay} Exercise Stats</div>
         <div className="w-full h-full mt-10 pr-12">
         {gymExercise?.length > 0  ? (
           <>
@@ -306,20 +351,10 @@ const Workout = () => {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip content={<CustomGymTooltip />}/>
-            <Area type="monotone" dataKey="rest_bw_sets" stroke="black" fill="#ffa8a8" />
+            <Area type="monotone" dataKey="rest_bw_sets" stroke="black" fill="#4dabf7" />
           </AreaChart>
         </ResponsiveContainer>
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart
-            data={gymExercise}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip content={<CustomGymTooltip />}/>
-            <Area type="monotone" dataKey="sets_performed" stroke="black" fill="#202020" />
-          </AreaChart>
-        </ResponsiveContainer>
+        
           </>
         ):(
           <div className="flex justify-center font-semibold">No Data Found For This Dates!!!</div>
@@ -327,23 +362,21 @@ const Workout = () => {
       </div>
         </Col>
 
-
-        <Col xl={8} lg={24} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-10">
+        <Col xl={8} lg={24} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-40">
+        <div className='font-semibold flex justify-center w-full'>{selectedExercise} Stats</div>
           <div className="w-full h-full mt-10 pr-12">
-            {selectedExercise && (
-              <div>{selectedExercise}</div>
-            )}
-          {gym?.length > 0 ? (
+           
+          {exerciseData?.length > 0 ? (
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart
+              <AreaChart
                 data={exerciseData}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="weight" angle={0} />
                 <YAxis />
                 <Tooltip content={<CustomGymTooltip2 />} />
-                <Line type="monotone" dataKey="reps" stroke="#82ca9d" />
-              </LineChart>
+                <Area type="monotone" fill="#da77f2" dataKey="reps" stroke="#282828" />
+              </AreaChart>
             </ResponsiveContainer>
           ):(
             <div className="flex justify-center font-semibold">No Data Found For This Dates!!!</div>

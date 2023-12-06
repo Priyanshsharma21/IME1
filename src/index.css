@@ -55,7 +55,9 @@
 }
 
 .workout{
-    background: #ff8787;
+    background: #ff8787d8;
+    height: max-content;
+    padding-bottom: 8rem;
 }
 
 .journal{
