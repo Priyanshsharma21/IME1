@@ -272,7 +272,6 @@ export const booksAndPodcastData = [
   },
 ];
 
-
 export const monthsArray = [
   { monthName: "January", monthNumber: 1 },
   { monthName: "February", monthNumber: 2 },
@@ -288,7 +287,6 @@ export const monthsArray = [
   { monthName: "December", monthNumber: 12 },
 ];
 
-
 export const weeksArray = [
   { weekNumber: 1, weekLabel: "Week 1" },
   { weekNumber: 2, weekLabel: "Week 2" },
@@ -297,11 +295,9 @@ export const weeksArray = [
   { weekNumber: 5, weekLabel: "Week 5" },
 ];
 
-
-
 export const techLearningData = [
   {
-    id : "23222w2",
+    id: "23222w2",
     title: "JavaScript",
     takeaways: [
       "JavaScript is a high-level, interpreted programming language.",
@@ -317,10 +313,10 @@ export const techLearningData = [
       "https://www.freecodecamp.org/learn/",
     ],
     date: "2023-12-04",
-    week_number : 1
+    week_number: 1,
   },
   {
-    id : "wdw3wx",
+    id: "wdw3wx",
     title: "React.js",
     takeaways: [
       "React is a JavaScript library for building user interfaces.",
@@ -336,11 +332,10 @@ export const techLearningData = [
       "https://egghead.io/courses/the-beginner-s-guide-to-react",
     ],
     date: "2023-12-04",
-    week_number : 1
-
+    week_number: 1,
   },
   {
-    id : "dwd22sw",
+    id: "dwd22sw",
     title: "Node.js",
     takeaways: [
       "Node.js is a JavaScript runtime built on the V8 JavaScript engine.",
@@ -356,17 +351,16 @@ export const techLearningData = [
       "https://www.tutorialspoint.com/nodejs/index.htm",
     ],
     date: "2023-12-2",
-    week_number : 1
-
+    week_number: 1,
   },
 
   {
-    id : "d3dwssqs",
+    id: "d3dwssqs",
     title: "Nextjs",
     takeaways: [
       "React framework which provides you more features.",
       "Features are like file based routing.",
-      "SSR, SEO, In build Lazy Loading, Image optimization."
+      "SSR, SEO, In build Lazy Loading, Image optimization.",
     ],
     duration: 23,
     resources: [
@@ -375,19 +369,17 @@ export const techLearningData = [
       "https://www.tutorialspoint.com/nodejs/index.htm",
     ],
     date: "2023-12-2",
-    week_number : 1
+    week_number: 1,
   },
 ];
 
-
-
 export const journalLearning = [
   {
-    id : "3e3d2ed",
-    date : "2023-12-4",
-    week_number : 1,
-    title : "Roller Coster Day",
-    takeaways : [
+    id: "3e3d2ed",
+    date: "2023-12-4",
+    week_number: 1,
+    title: "Roller Coster Day",
+    takeaways: [
       "Wake Up early and did my workout.",
       "Took healthy breakfast.",
       "Reached office at time.",
@@ -395,10 +387,10 @@ export const journalLearning = [
       "Completed my tasks.",
       "Did gym workout.",
       "Learned New things.",
-      "Slept on time"
+      "Slept on time",
     ],
 
-    positives : [
+    positives: [
       "Wake Up early morning",
       "Read 10 pages of book",
       "Did both morning and evening workout.",
@@ -409,133 +401,186 @@ export const journalLearning = [
       "Donated 100rs in charity",
       "Learned song on guitar",
       "Helped one guy with Gym workout and Nutrition guide for free.",
-      "Best part is listening thank you from 4 peoples today."
+      "Best part is listening thank you from 4 peoples today.",
     ],
 
-    negative : [
+    negative: [
       "Wasted my time on empty scrolling",
       "Overthinking about someone.",
       "Felt insecure about myself, will work on that.",
     ],
 
-    learning : [
+    learning: [
       "Stop wasting on things you can't control, stop overthinking, stop giving fuck about people who dont care about you.",
       "Focus on yourself, make yourself 1% everyday, try to help as much as possible. Spread positivity in this universe, keep yourself busy.",
-      "Take help of music, play more songs on guitar, keep yourself busy as much as possible."
+      "Take help of music, play more songs on guitar, keep yourself busy as much as possible.",
     ],
 
-    actions : [
+    actions: [
       "Wake up early, resist my sleep.",
       "Said no to junk and keep eating boring boiled food.",
       "Helped 3 people still had no time.",
-      "Went to gym when I was too tired and pushed my limits, hit PR in bench press."
+      "Went to gym when I was too tired and pushed my limits, hit PR in bench press.",
     ],
 
-    rating : 80,
-    resources_gather : [
+    rating: 80,
+    resources_gather: [
       {
-        title : "Nextjs topic",
-        url : "https://www.builder.io/blog/nextjs-14-layouts-templates?ref=dailydev"
-      }
-    ]
+        title: "Nextjs topic",
+        url: "https://www.builder.io/blog/nextjs-14-layouts-templates?ref=dailydev",
+      },
+    ],
   },
 
   {
-    "id": "fwef3dw",
-    "date": "2023-12-05",
-    "week_number": 1,
-    title : "Chill Pill",
-    "takeaways": ["Morning meditation", "Healthy breakfast", "Productive workday"],
-    "positives": ["Completed coding challenge", "Positive feedback from a colleague"],
-    "negative": ["Procrastinated on a task"],
-    "learning": ["Effective time management", "Improved coding skills"],
-    "actions": ["Scheduled tasks for tomorrow", "Set realistic goals"],
-    "rating": 85,
-    "resources_gather": [
+    id: "fwef3dw",
+    date: "2023-12-05",
+    week_number: 1,
+    title: "Chill Pill",
+    takeaways: [
+      "Morning meditation",
+      "Healthy breakfast",
+      "Productive workday",
+    ],
+    positives: [
+      "Completed coding challenge",
+      "Positive feedback from a colleague",
+    ],
+    negative: ["Procrastinated on a task"],
+    learning: ["Effective time management", "Improved coding skills"],
+    actions: ["Scheduled tasks for tomorrow", "Set realistic goals"],
+    rating: 85,
+    resources_gather: [
       {
-        "title": "Effective Time Management",
-        "url": "https://www.lifehack.org/articles/productivity/10-ways-to-improve-time-management-skills-for-more-productivity.html"
-      }
-    ]
+        title: "Effective Time Management",
+        url: "https://www.lifehack.org/articles/productivity/10-ways-to-improve-time-management-skills-for-more-productivity.html",
+      },
+    ],
   },
 
   {
-    "id": "f23ef3ec",
-    "date": "2023-12-06",
-    "week_number": 1,
-    title : "Productive Day",
-    "takeaways": ["Early morning workout", "Healthy meal choices"],
-    "positives": ["Completed daily reading goal", "Finished a challenging task"],
-    "negative": ["Struggled with focus in the afternoon"],
-    "learning": ["Importance of consistent exercise", "Effective task prioritization"],
-    "actions": ["Scheduled regular breaks", "Started a new coding project"],
-    "rating": 90,
-    "resources_gather": [
+    id: "f23ef3ec",
+    date: "2023-12-06",
+    week_number: 1,
+    title: "Productive Day",
+    takeaways: ["Early morning workout", "Healthy meal choices"],
+    positives: ["Completed daily reading goal", "Finished a challenging task"],
+    negative: ["Struggled with focus in the afternoon"],
+    learning: [
+      "Importance of consistent exercise",
+      "Effective task prioritization",
+    ],
+    actions: ["Scheduled regular breaks", "Started a new coding project"],
+    rating: 90,
+    resources_gather: [
       {
-        "title": "Task Prioritization Techniques",
-        "url": "https://blog.trello.com/task-prioritization"
-      }
-    ]
+        title: "Task Prioritization Techniques",
+        url: "https://blog.trello.com/task-prioritization",
+      },
+    ],
   },
 
   {
-    "id": "f23ef323e",
-    "date": "2023-12-07",
-    "week_number": 1,
-    title : "Ready Stady Poo",
-    "takeaways": ["Mindful breathing exercises", "Completed a coding tutorial"],
-    "positives": ["Maintained a positive mindset", "Helped a friend with a tech issue"],
-    "negative": ["Feeling fatigued in the evening"],
-    "learning": ["Practicing mindfulness for better focus", "Deepened coding knowledge"],
-    "actions": ["Scheduled a tech meetup", "Planned a weekend coding session"],
-    "rating": 88,
-    "resources_gather": [
+    id: "f23ef323e",
+    date: "2023-12-07",
+    week_number: 1,
+    title: "Ready Stady Poo",
+    takeaways: ["Mindful breathing exercises", "Completed a coding tutorial"],
+    positives: [
+      "Maintained a positive mindset",
+      "Helped a friend with a tech issue",
+    ],
+    negative: ["Feeling fatigued in the evening"],
+    learning: [
+      "Practicing mindfulness for better focus",
+      "Deepened coding knowledge",
+    ],
+    actions: ["Scheduled a tech meetup", "Planned a weekend coding session"],
+    rating: 88,
+    resources_gather: [
       {
-        "title": "Mindful Breathing Techniques",
-        "url": "https://www.mindful.org/how-to-meditate/"
-      }
-    ]
+        title: "Mindful Breathing Techniques",
+        url: "https://www.mindful.org/how-to-meditate/",
+      },
+    ],
   },
 
   {
-    "id": "2edf2323",
-    "date": "2023-12-08",
-    "week_number": 1,
-    title : "Learning A Lot Day",
-    "takeaways": ["Completed a personal project milestone", "Healthy meal prep for the week"],
-    "positives": ["Received positive client feedback", "Took a nature walk"],
-    "negative": ["Delayed a work deadline"],
-    "learning": ["Effective client communication", "Balancing work and relaxation"],
-    "actions": ["Scheduled regular breaks during work", "Set aside time for self-care"],
-    "rating": 87,
-    "resources_gather": [
+    id: "2edf2323",
+    date: "2023-12-08",
+    week_number: 1,
+    title: "Learning A Lot Day",
+    takeaways: [
+      "Completed a personal project milestone",
+      "Healthy meal prep for the week",
+    ],
+    positives: ["Received positive client feedback", "Took a nature walk"],
+    negative: ["Delayed a work deadline"],
+    learning: [
+      "Effective client communication",
+      "Balancing work and relaxation",
+    ],
+    actions: [
+      "Scheduled regular breaks during work",
+      "Set aside time for self-care",
+    ],
+    rating: 87,
+    resources_gather: [
       {
-        "title": "Effective Client Communication",
-        "url": "https://www.smashingmagazine.com/2018/02/effective-communication-developers/"
-      }
-    ]
-  }
-]
+        title: "Effective Client Communication",
+        url: "https://www.smashingmagazine.com/2018/02/effective-communication-developers/",
+      },
+    ],
+  },
+];
 
+export const days = [
+  {
+    title: "Monday",
+    key: 1,
+  },
+  {
+    title: "Tuesday",
+    key: 2,
+  },
+  {
+    title: "Wednesday",
+    key: 3,
+  },
+  {
+    title: "Thursday",
+    key: 4,
+  },
+  {
+    title: "Friday",
+    key: 5,
+  },
+  {
+    title: "Saturday",
+    key: 6,
+  },
+  {
+    title: "Sunday",
+    key: 7,
+  },
+];
 
-
-
-const cardioData = [
+export const cardioData = [
   {
     date: "2023-12-01",
     week_number: 1,
     workout_type: "Cardio",
     duration: 10,
     rest_bw_sets: 15,
-    day : "Monday",
+    day: "Monday",
     exercises_performed: [
-      { name: "Explosive jumping jacks squads", timing: 80 },
-      { name: "Mountain climber pushups", timing: 120 },
-      { name: "punch squads", timing: 80 },
-      { name: "russian twist with punches", timing: 80 },
-      { name: "lunges with squads", timing: 80 },
-      { name: "shoulder press with pushups", timing: 80 },
-      { name: "v-ups", timing: 40 },
+      { name: "Explosive jumping jacks squads", timing: 80, type: "cardio" },
+      { name: "Mountain climber pushups", timing: 120, type: "cardio" },
+      { name: "punch squads", timing: 80, type: "cardio" },
+      { name: "russian twist with punches", timing: 80, type: "cardio" },
+      { name: "lunges with squads", timing: 80, type: "cardio" },
+      { name: "shoulder press with pushups", timing: 80, type: "cardio" },
+      { name: "v-ups", timing: 40, type: "cardio" },
     ],
   },
   {
@@ -544,15 +589,15 @@ const cardioData = [
     workout_type: "Cardio",
     duration: 12,
     rest_bw_sets: 20,
-    day : "Tuesday",
+    day: "Tuesday",
     exercises_performed: [
-      { name: "High knees", timing: 90 },
-      { name: "Burpees", timing: 60 },
-      { name: "Jump rope", timing: 180 },
-      { name: "Box jumps", timing: 120 },
-      { name: "Plank jacks", timing: 60 },
-      { name: "Mountain climbers", timing: 90 },
-      { name: "Jumping lunges", timing: 90 },
+      { name: "High knees", timing: 90, type: "cardio" },
+      { name: "Burpees", timing: 60, type: "cardio" },
+      { name: "Jump rope", timing: 180, type: "cardio" },
+      { name: "Box jumps", timing: 120, type: "cardio" },
+      { name: "Plank jacks", timing: 60, type: "cardio" },
+      { name: "Mountain climbers", timing: 90, type: "cardio" },
+      { name: "Jumping lunges", timing: 90, type: "cardio" },
     ],
   },
   {
@@ -561,34 +606,31 @@ const cardioData = [
     workout_type: "Cardio",
     duration: 15,
     rest_bw_sets: 15,
-    day : "Wednesday",
+    day: "Wednesday",
     exercises_performed: [
-      { name: "Sprint intervals", timing: 60 },
-      { name: "Jumping jacks", timing: 120 },
-      { name: "Side shuffle", timing: 90 },
-      { name: "Toe taps", timing: 60 },
-      { name: "Bicycle crunches", timing: 120 },
-      { name: "Plank to push-up", timing: 90 },
-      { name: "Star jumps", timing: 60 },
+      { name: "Sprint intervals", timing: 60, type: "cardio" },
+      { name: "Jumping jacks", timing: 120, type: "cardio" },
+      { name: "Side shuffle", timing: 90, type: "cardio" },
+      { name: "Toe taps", timing: 60, type: "cardio" },
+      { name: "Bicycle crunches", timing: 120, type: "cardio" },
+      { name: "Plank to push-up", timing: 90, type: "cardio" },
+      { name: "Star jumps", timing: 60, type: "cardio" },
     ],
   },
 ];
 
-
-
-
-
-const gymWorkoutData = [
+export const gymWorkoutData = [
   {
     date: "2023-12-01",
     week_number: 1,
     workout_type: "Push",
-    day : "Monday",
+    day: "Monday",
     duration: 70,
     exercises_performed: [
       {
         name: "Barbell Bench Press",
         rest_bw_sets: 90,
+        sets_performed: 3,
         sets_info: [
           { set_number: 1, weight: 50, reps: 12 },
           { set_number: 2, weight: 55, reps: 10 },
@@ -598,139 +640,139 @@ const gymWorkoutData = [
       {
         name: "Overhead Dumbbell Press",
         rest_bw_sets: 75,
+        sets_performed: 3,
         sets_info: [
           { set_number: 1, weight: 22.5, reps: 12 },
           { set_number: 2, weight: 25, reps: 10 },
           { set_number: 3, weight: 27.5, reps: 8 },
         ],
       },
-      
+
       {
-        name : "Smith Machine Chest Press",
-        rest_bw_sets : 90,
-        sets_info : [
+        name: "Smith Machine Chest Press",
+        rest_bw_sets: 90,
+        sets_performed: 4,
+        sets_info: [
           {
-            set_number : 1,
-            weight : 50, // kg 
-            reps : 12
+            set_number: 1,
+            weight: 50, // kg
+            reps: 12,
           },
-           {
-            set_number : 2,
-            weight : 40, // kg
-            reps : 15
-          },
-           {
-            set_number : 3,
-            weight : 40, // kg 
-            reps : 12
-          },
-           {
-            set_number : 4,
-            weight : 30, // kg
-            reps : 18
-          }
-        ]
-      },
-    
-    
-       {
-        name : "Lateral Raises",
-        rest_bw_sets : 90, // seconds
-        sets_info : [
           {
-            set_number : 1,
-            weight : 12.5, // kg 
-            reps : 15
+            set_number: 2,
+            weight: 40, // kg
+            reps: 15,
           },
-           {
-            set_number : 2,
-            weight : 12.5 ,// kg
-            reps : 10
-          },
-           {
-            set_number : 3,
-            weight : 10 ,// kg 
-            reps : 20
-          },
-           {
-            set_number : 4,
-            weight : 10, // kg
-            reps : 18
-          }
-        ]
-      },
-    
-    
-    
-    
-       {
-        name : "Tricep Pushdown",
-        rest_bw_sets : 90, // seconds
-        sets_info : [
           {
-            set_number : 1,
-            weight : 50, // kg 
-            reps : 12
+            set_number: 3,
+            weight: 40, // kg
+            reps: 12,
           },
-           {
-            set_number : 2,
-            weight : 40, // kg
-            reps : 15
+          {
+            set_number: 4,
+            weight: 30, // kg
+            reps: 18,
           },
-           {
-            set_number : 3,
-            weight : 40, // kg 
-            reps : 15
-          },
-           {
-            set_number : 4,
-            weight : 30, // kg
-            reps : 20
-          }
-        ]
+        ],
       },
-    
-    
+
       {
-        name : "Cable Chest Flys",
-        rest_bw_sets : 90, // seconds
-        sets_info : [
+        name: "Lateral Raises",
+        rest_bw_sets: 90, // seconds
+        sets_performed: 4,
+        sets_info: [
           {
-            set_number : 1,
-            weight : 20,
-            reps : 15
+            set_number: 1,
+            weight: 12.5, // kg
+            reps: 15,
           },
-           {
-            set_number : 2,
-            weight : 20,
-            reps : 15
+          {
+            set_number: 2,
+            weight: 12.5, // kg
+            reps: 10,
           },
-           {
-            set_number : 3,
-            weight : 15,
-            reps : 20
+          {
+            set_number: 3,
+            weight: 10, // kg
+            reps: 20,
           },
-           {
-            set_number : 4,
-            weight :15,
-            reps : 20
-          }
-        ]
+          {
+            set_number: 4,
+            weight: 10, // kg
+            reps: 18,
+          },
+        ],
+      },
+
+      {
+        name: "Tricep Pushdown",
+        rest_bw_sets: 90, // seconds
+        sets_performed: 4,
+        sets_info: [
+          {
+            set_number: 1,
+            weight: 50, // kg
+            reps: 12,
+          },
+          {
+            set_number: 2,
+            weight: 40, // kg
+            reps: 15,
+          },
+          {
+            set_number: 3,
+            weight: 40, // kg
+            reps: 15,
+          },
+          {
+            set_number: 4,
+            weight: 30, // kg
+            reps: 20,
+          },
+        ],
+      },
+
+      {
+        name: "Cable Chest Flys",
+        rest_bw_sets: 90, // seconds
+        sets_performed: 4,
+        sets_info: [
+          {
+            set_number: 1,
+            weight: 20,
+            reps: 15,
+          },
+          {
+            set_number: 2,
+            weight: 20,
+            reps: 15,
+          },
+          {
+            set_number: 3,
+            weight: 15,
+            reps: 20,
+          },
+          {
+            set_number: 4,
+            weight: 15,
+            reps: 20,
+          },
+        ],
       },
     ],
   },
-
 
   {
     date: "2023-12-02",
     week_number: 1,
     workout_type: "Pull",
     duration: 75,
-    day : "Tuesday",
+    day: "Tuesday",
     exercises_performed: [
       {
         name: "Deadlifts",
         rest_bw_sets: 120,
+        sets_performed: 3,
         sets_info: [
           { set_number: 1, weight: 80, reps: 10 },
           { set_number: 2, weight: 90, reps: 8 },
@@ -740,46 +782,48 @@ const gymWorkoutData = [
       {
         name: "Pull-Ups",
         rest_bw_sets: 90,
+        sets_performed: 3,
         sets_info: [
-          { set_number: 1,weight: 77, reps: 10 },
-          { set_number: 2,weight: 77, reps: 8 },
-          { set_number: 3,weight: 77, reps: 6 },
+          { set_number: 1, weight: 77, reps: 10 },
+          { set_number: 2, weight: 77, reps: 8 },
+          { set_number: 3, weight: 77, reps: 6 },
         ],
       },
       {
         name: "Cable Rows",
         rest_bw_sets: 90,
+        sets_performed: 4,
         sets_info: [
-          { set_number: 1, reps: 15, weight: 100, },
-          { set_number: 2, reps: 12, weight: 120, },
-          { set_number: 3, reps: 10, weight: 130, },
-          { set_number: 3, reps: 18, weight: 100, },
+          { set_number: 1, reps: 15, weight: 100 },
+          { set_number: 2, reps: 12, weight: 120 },
+          { set_number: 3, reps: 10, weight: 130 },
+          { set_number: 3, reps: 18, weight: 100 },
         ],
       },
 
       {
         name: "cable pullover",
         rest_bw_sets: 90,
+        sets_performed: 4,
         sets_info: [
-          { set_number: 1, reps: 15, weight: 40, },
-          { set_number: 2, reps: 15, weight: 40, },
-          { set_number: 3, reps: 15, weight: 40, },
-          { set_number: 3, reps: 16, weight: 40, },
+          { set_number: 1, reps: 15, weight: 40 },
+          { set_number: 2, reps: 15, weight: 40 },
+          { set_number: 3, reps: 15, weight: 40 },
+          { set_number: 3, reps: 16, weight: 40 },
         ],
       },
 
       {
         name: "Dumbell Curl",
         rest_bw_sets: 90,
+        sets_performed: 4,
         sets_info: [
-          { set_number: 1, reps: 15, weight: 10, },
-          { set_number: 2, reps: 12, weight: 12.5, },
-          { set_number: 3, reps: 10, weight: 15, },
-          { set_number: 3, reps: 21, weight: 7.5, },
+          { set_number: 1, reps: 15, weight: 10 },
+          { set_number: 2, reps: 12, weight: 12.5 },
+          { set_number: 3, reps: 10, weight: 15 },
+          { set_number: 3, reps: 21, weight: 7.5 },
         ],
       },
-
-
     ],
   },
   {
@@ -787,11 +831,12 @@ const gymWorkoutData = [
     week_number: 1,
     workout_type: "Legs",
     duration: 80,
-    day : "Wednesday",
+    day: "Wednesday",
     exercises_performed: [
       {
         name: "Back Squats",
         rest_bw_sets: 120,
+        sets_performed: 4,
         sets_info: [
           { set_number: 1, weight: 60, reps: 18 },
           { set_number: 2, weight: 80, reps: 12 },
@@ -802,6 +847,7 @@ const gymWorkoutData = [
       {
         name: "Leg Press",
         rest_bw_sets: 90,
+        sets_performed: 4,
         sets_info: [
           { set_number: 1, weight: 90, reps: 18 },
           { set_number: 2, weight: 120, reps: 15 },
@@ -813,6 +859,7 @@ const gymWorkoutData = [
       {
         name: "Leg Curls",
         rest_bw_sets: 90,
+        sets_performed: 4,
         sets_info: [
           { set_number: 1, weight: 60, reps: 10 },
           { set_number: 2, weight: 50, reps: 15 },
@@ -824,6 +871,7 @@ const gymWorkoutData = [
       {
         name: "Leg Extentions",
         rest_bw_sets: 90,
+        sets_performed: 4,
         sets_info: [
           { set_number: 1, weight: 60, reps: 10 },
           { set_number: 2, weight: 50, reps: 15 },
@@ -835,6 +883,7 @@ const gymWorkoutData = [
       {
         name: "Leg Calf raises",
         rest_bw_sets: 60,
+        sets_performed: 4,
         sets_info: [
           { set_number: 1, weight: 50, reps: 21 },
           { set_number: 2, weight: 50, reps: 21 },
