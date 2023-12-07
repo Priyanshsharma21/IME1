@@ -1,4 +1,4 @@
-import { Row, Col, Select } from 'antd';
+import { Row, Col, Select, Skeleton } from 'antd';
 import React, { useEffect, useState } from 'react';
 import {
   BarChart,
@@ -13,12 +13,13 @@ import {
   Area,
   LineChart,
   Line,
+  ComposedChart,
 } from 'recharts';
 import {gymWorkoutData, cardioData, monthsArray, weeksArray, days} from '../../constants/const'
 import moment from 'moment'
 import { useNavigate } from 'react-router-dom';
 import { IoMdArrowRoundBack } from "react-icons/io";
-
+import { CardioCard, GymCard } from '../../components'
 
 const { Option } = Select;
 
@@ -89,9 +90,6 @@ const Workout = () => {
   const [gymExercise, setGymExercise] = useState({});
   const [exercises, setExercises] = useState({});
   const [exerciseData, setExerciseData] = useState({});
-
-  console.log(cardio,gym)
-
   useEffect(()=>{
     setCardio(cardioData)
   },[])
@@ -284,15 +282,16 @@ const Workout = () => {
               </BarChart>
             </ResponsiveContainer>
           ):(
-            <div className="flex justify-center font-semibold">No Data Found For This Dates!!!</div>
+            <Skeleton active className='pl-16'>No Data Found For This Dates!!!</Skeleton>
           )}
           </div>
         </Col>
 
         <Col xl={12} lg={12} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-10">
 
+        <div className='font-semibold flex justify-center mmt w-full'>Week {selectedWeek} Cardio Stats</div>
         <div className="w-full h-full mt-10 pr-12">
-        <div className='font-semibold flex justify-center w-full'>Week {selectedWeek} Cardio Stats</div>
+    
 
         {cardioRaw?.length > 0  ? (
           <ResponsiveContainer width="100%" height="100%">
@@ -307,7 +306,7 @@ const Workout = () => {
           </AreaChart>
         </ResponsiveContainer>
         ):(
-          <div className="flex justify-center font-semibold">No Data Found For This Dates!!!</div>
+          <Skeleton active className='pl-16'>No Data Found For This Dates!!!</Skeleton>
         )}
       </div>
         </Col>
@@ -333,7 +332,7 @@ const Workout = () => {
           
             </ResponsiveContainer>
           ):(
-            <div className="flex justify-center font-semibold">No Data Found For This Dates!!!</div>
+            <Skeleton active className='pl-16'>No Data Found For This Dates!!!</Skeleton>
           )}
           </div>
         </Col>
@@ -357,7 +356,7 @@ const Workout = () => {
         
           </>
         ):(
-          <div className="flex justify-center font-semibold">No Data Found For This Dates!!!</div>
+          <Skeleton active className='pl-16'>No Data Found For This Dates!!!</Skeleton>
         )}
       </div>
         </Col>
@@ -368,23 +367,55 @@ const Workout = () => {
            
           {exerciseData?.length > 0 ? (
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart
+              <ComposedChart
                 data={exerciseData}
               >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="weight" angle={0} />
-                <YAxis />
+                <XAxis dataKey="set_number" angle={0} />
+                <YAxis label={{ value: 'Index', angle: -90, position: 'insideLeft' }}/>
                 <Tooltip content={<CustomGymTooltip2 />} />
-                <Area type="monotone" fill="#da77f2" dataKey="reps" stroke="#282828" />
-              </AreaChart>
+                <Area type="monotone" fill="#da77f2" dataKey="weight" stroke="#282828" />
+              </ComposedChart>
             </ResponsiveContainer>
           ):(
-            <div className="flex justify-center font-semibold">No Data Found For This Dates!!!</div>
+            <Skeleton active className='pl-16'>No Data Found For This Dates!!!</Skeleton>
           )}
           </div>
         </Col>
+      </Row>
 
+      <Row className='mt-40'>
+        <div className='w-full flex justify-center font-semibold text-[1.5rem] mb-10'>Cardio Details</div>
+        {cardioRaw.length > 0 ? (
+          <>
+          {cardioRaw?.map((data)=>(
+          <Col className='flex justify-center' xl={6} lg={8} md={12} sm={24} xs={24}>
+            <CardioCard cardioData={data} />
+          </Col>
+        ))}
+          </>
+        ) : [1,2,3].map((skull)=>(
+          <Col className='flex justify-center' xl={6} lg={8} md={12} sm={24} xs={24}>
+           <Skeleton active className='pl-16 pr-16'>No Data Found For This Dates!!!</Skeleton>
+        </Col>
+        ))}
+      </Row>
 
+      <Row className='mt-40'>
+        <div className='w-full flex justify-center font-semibold text-[1.5rem] mb-10'>Gym Workout Details</div>
+        {gym.length > 0 ? (
+          <>
+          {gym?.map((data)=>(
+          <Col className='flex justify-center' xl={6} lg={8} md={12} sm={24} xs={24}>
+            <GymCard gymData={data} />
+          </Col>
+        ))}
+          </>
+        ) : [1,2,3].map((skull)=>(
+          <Col className='flex justify-center' xl={6} lg={8} md={12} sm={24} xs={24}>
+           <Skeleton active className='pl-16 pr-16'>No Data Found For This Dates!!!</Skeleton>
+        </Col>
+        ))}
       </Row>
     </div>
   )

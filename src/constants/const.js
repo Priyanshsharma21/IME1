@@ -532,6 +532,31 @@ export const journalLearning = [
       },
     ],
   },
+
+  {
+    id: "f23ef323e",
+    date: "2023-12-07",
+    week_number: 1,
+    title: "Fighting with my own demons.",
+    takeaways: ["I'm a ", "Completed a coding tutorial"],
+    positives: [
+      "Maintained a positive mindset",
+      "Helped a friend with a tech issue",
+    ],
+    negative: ["Feeling fatigued in the evening"],
+    learning: [
+      "Practicing mindfulness for better focus",
+      "Deepened coding knowledge",
+    ],
+    actions: ["Scheduled a tech meetup", "Planned a weekend coding session"],
+    rating: 88,
+    resources_gather: [
+      {
+        title: "Mindful Breathing Techniques",
+        url: "https://www.mindful.org/how-to-meditate/",
+      },
+    ],
+  },
 ];
 
 export const days = [
@@ -567,6 +592,7 @@ export const days = [
 
 export const cardioData = [
   {
+    id: "223s233",
     date: "2023-12-01",
     week_number: 1,
     workout_type: "Cardio",
@@ -584,6 +610,7 @@ export const cardioData = [
     ],
   },
   {
+    id: "223s232",
     date: "2023-12-02",
     week_number: 1,
     workout_type: "Cardio",
@@ -601,6 +628,7 @@ export const cardioData = [
     ],
   },
   {
+    id: "223s231",
     date: "2023-12-03",
     week_number: 1,
     workout_type: "Cardio",
@@ -621,6 +649,7 @@ export const cardioData = [
 
 export const gymWorkoutData = [
   {
+    id: "232e22",
     date: "2023-12-01",
     week_number: 1,
     workout_type: "Push",
@@ -763,6 +792,7 @@ export const gymWorkoutData = [
   },
 
   {
+    id: "232e221",
     date: "2023-12-02",
     week_number: 1,
     workout_type: "Pull",
@@ -827,6 +857,7 @@ export const gymWorkoutData = [
     ],
   },
   {
+    id: "232e22112",
     date: "2023-12-03",
     week_number: 1,
     workout_type: "Legs",
