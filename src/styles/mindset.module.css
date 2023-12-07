@@ -198,8 +198,8 @@
 
 .card3 {
   position: relative;
-  width: 190px;
-  height: 254px;
+  width: 100%;
+  height: 100%;
   background: lightgrey;
   box-shadow: #d11bff42 0 15px 40px -5px;
   z-index: 1;
@@ -251,4 +251,110 @@
   left: 100px;
   top: 180px;
   background: #0061ff;
+}
+
+.cardioCard{
+background: rgba(255, 255, 255, 0.11);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.6px);
+-webkit-backdrop-filter: blur(9.6px);
+border: 1px solid rgba(255, 255, 255, 0.29);
+
+width: max-content;
+height: 200px;
+width: 200px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transition: all 0.3s linear;
+cursor: pointer;
+margin-top: 2rem;
+}
+
+.cardioCard:hover{
+  box-shadow: 0px 0px 21px 3px gold;
+}
+
+
+.containerCardio {
+  color: white;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.containerCardio::before,
+.containerCardio::after {
+  content: "";
+  background-color: #fab5704c;
+  position: absolute;
+}
+
+.containerCardio::before {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  top: 30%;
+  right: 7%;
+}
+
+.containerCardio::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+  border: 1px solid;
+}
+
+.containerCardio .boxCardio {
+  width: 11.875em;
+  height: 15.875em;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
+}
+
+.containerCardio .boxCardio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.containerCardio .boxCardio .titleCardio {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.containerCardio .boxCardio div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.containerCardio .boxCardio div p {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.containerCardio .boxCardio div span {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.containerCardio .boxCardio div span:nth-child(3) {
+  font-weight: 500;
+  margin-right: 0.2rem;
+}
+
+.containerCardio .boxCardio:hover {
+  box-shadow: 0px 0px 20px 1px #ffbb763f;
+  border: 1px solid rgba(255, 255, 255, 0.454);
 }

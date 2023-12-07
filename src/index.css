@@ -119,6 +119,11 @@
     margin-left: 10rem;
     margin-right: 10rem;
 }
+.takeawaysmini{
+    margin-top: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
 .learningBy{
     font-size: 1rem;
     font-weight: 500;
@@ -148,6 +153,10 @@
     font-size: 2rem;
 }
 
+.makemetable{
+    border-bottom: 1px solid black;
+}
+
 
 
 @media (max-width: 991px) {
@@ -159,6 +168,14 @@
         margin-top: 3rem;
         margin-left: 2rem;
         margin-right: 2rem;
+    }
+    .takeawaysmini{
+        margin-top: 1rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .mmt{
+        margin-top: 3rem;
     }
 }
 
@@ -172,6 +189,10 @@
     .heading{
         font-size: 1.2rem;
     }
+
+    
+
+    
 }
 
 @media (max-width: 481px) {
@@ -184,13 +205,21 @@
     .btnText{
         font-size: 12px;
     }
+    .mmc{
+        flex-direction: column;
+        align-items: center;
+    }
 
     .takeaways{
         margin-top: 2rem;
         margin-left: 1rem;
         margin-right: 1rem;
     }
-  
+    .takeawaysmini{
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 

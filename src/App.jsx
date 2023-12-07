@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Fitness, Home, Mindset, Expense, LiveHard, Content } from './pages';
 import { BookDetails, Books, Journal, JournalDetails, Tech, TechDetails } from './pages/mindset/index';
 import { Navbar } from './components';
-import { Meditation, Nutrition, Workout } from './pages/fitness/index.js';
+import { Meditation, Nutrition, Workout,CardioDetails, GymDetails } from './pages/fitness/index.js';
 import { Savings, DailyExpense, Investments } from './pages/expense/index.js';
 import {Editing, Marketing, Script} from './pages/content/index.js';
 import { Phase1, Phase2, SFHard } from './pages/livehard/index.js';
@@ -25,6 +25,10 @@ const App = () => {
         
         <Route path="/body" element={<Fitness />} />
         <Route path="/body/workout" element={<Workout />} />
+        <Route path="/body/workout/cardio/:id" element={<CardioDetails />} />
+        <Route path="/body/workout/gym/:id" element={<GymDetails />} />
+        
+        
         <Route path="/body/nutrition" element={<Nutrition />} />
         <Route path="/body/meditation" element={<Meditation />} />
 
