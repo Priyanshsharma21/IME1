@@ -4,7 +4,6 @@ import { gymWorkoutData } from '../../constants/const';
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { motion } from 'framer-motion';
 import classNames from '../../styles/mindset.module.css'
-import { LiaHandPointRight } from 'react-icons/lia';
 import { Table, Tag } from 'antd';
 import moment from 'moment';
 
@@ -16,27 +15,6 @@ const GymDetails = () => {
       const gd = gymWorkoutData.find(b=>b.id===id)
       setGym(gd);
     }, [id]);
-
-    const setsInfoColumns = [
-        {
-            title: 'Set Number',
-          dataIndex: 'name',
-          key: 'name',
-          align : "center"
-        },
-        {
-            title: 'Weight',
-          dataIndex: 'weight',
-          key: 'weight',
-          align : "center"
-        },
-        {
-            title: 'Reps',
-          dataIndex: 'reps',
-          key: 'reps',
-          align : "center"
-        },
-    ]
 
     const columns = [
         {
@@ -130,60 +108,6 @@ const GymDetails = () => {
         <Table className='w-full takeaways' dataSource={gym?.exercises_performed} columns={columns} />;
     </motion.div>
 
-    {/* <div className="takeaways mt-4">
-        <ul>
-        {gym &&
-            gym.exercises_performed
-            .map((exercise, index) => (
-              <motion.div
-               whileInView={{x:[100,0], opacity:[0,1]}}
-               transition={{duration:1}} key={index} className={classNames.takeawaysText}>
-                <div className="flex">
-                <div>
-                <LiaHandPointRight className="inline-block mr-2" />
-                {exercise.name}--------
-                </div>
-                <div className=''>
-                <Tag color="default">{exercise.timing} seconds</Tag>
-                </div>
-                </div>
-              </motion.div>
-            ))}
-        </ul>
-      </div> */}
-
-      {/* <div className='takeawaysmini'>
-      <motion.div
-         whileInView={{x:[-100,0], opacity:[0,1]}}
-         transition={{duration:0.5}}
-         className='mt-10'
-        >
-        Duration - <span className='font-semibold'>
-        {cardio && cardio.duration} minutes
-        </span>
-        </motion.div>
-      </div> */}
-      {/* <div className='takeawaysmini'>
-      <motion.div
-         whileInView={{x:[-100,0], opacity:[0,1]}}
-         transition={{duration:0.5}}
-        >
-        Date - <span className="font-semibold">
-        {cardio && moment(cardio?.date).format("DD MMMM YYYY")}
-        </span>
-        </motion.div>
-      </div> */}
-
-      {/* <div className='takeawaysmini'>
-      <motion.div
-         whileInView={{x:[-100,0], opacity:[0,1]}}
-         transition={{duration:0.5}}
-        >
-        Date - <span className="font-semibold">
-        {cardio && cardio?.rest_bw_sets} seconds
-        </span>
-        </motion.div>
-      </div> */}
     </div>
     </div>
   )
