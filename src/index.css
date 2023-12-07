@@ -60,6 +60,11 @@
     padding-bottom: 8rem;
 }
 
+.nutrition{
+    height: max-content;
+    padding-bottom: 8rem;
+}
+
 .journal{
     background: #bd8def;
 }

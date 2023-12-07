@@ -263,7 +263,7 @@ const Workout = () => {
                 )}
         </Col>
       </Row>
-              </div>
+    </div>
       <Row>
         <Col xl={12} lg={12} md={24} sm={24} xs={24} className="w-full h-[40vh] mt-10">
          <div className='font-semibold flex justify-center w-full'>{selectedDay} Cardio Exercises Stats</div>
