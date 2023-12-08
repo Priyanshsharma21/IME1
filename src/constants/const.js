@@ -926,12 +926,34 @@ export const gymWorkoutData = [
   },
 ];
 
+export const meals = [
+  {
+    name: "Breakfast",
+    key: 1,
+  },
+  {
+    name: "Lunch",
+    key: 2,
+  },
+  {
+    name: "Snacks",
+    key: 3,
+  },
+  {
+    name: "Pre-workout",
+    key: 4,
+  },
+  {
+    name: "Dinner",
+    key: 5,
+  },
+];
 
 export const nutritionData = [
   {
     date: "2023-12-01",
     week_number: 1,
-    day : "Monday",
+    day: "Monday",
     calories_consumed: 1800,
     protein_count: 140,
     carbs_count: 220,
@@ -987,7 +1009,7 @@ export const nutritionData = [
         food_ate: [
           {
             name: "Eggs",
-            quantity: 5,
+            quantity: 200,
             calories: 368,
             protein: 25,
             carbs: 2,
@@ -1094,7 +1116,7 @@ export const nutritionData = [
     week_number: 1,
     calories_consumed: 2200,
     protein_count: 120,
-    day : "Tuesday",
+    day: "Tuesday",
     carbs_count: 180,
     fat_count: 50,
     meals: [
@@ -1234,15 +1256,13 @@ export const nutritionData = [
     ],
   },
 
-
-
   {
     date: "2023-12-03",
     week_number: 1,
     calories_consumed: 2000,
     protein_count: 160,
     carbs_count: 180,
-    day : "Wednesday",
+    day: "Wednesday",
     fat_count: 90,
     meals: [
       {
@@ -1380,6 +1400,4 @@ export const nutritionData = [
       },
     ],
   },
-
-
-]
+];
