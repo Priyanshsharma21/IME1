@@ -62,7 +62,7 @@
 
 .nutrition{
     height: max-content;
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
 }
 
 .journal{
@@ -181,6 +181,10 @@
     }
     .mmt{
         margin-top: 3rem;
+    }
+
+    .mt{
+        margin-top: 5rem;
     }
 }
 
